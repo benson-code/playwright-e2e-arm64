@@ -1,0 +1,2 @@
+# LF everywhere, so files read cleanly in vim on any OS (no ^M at line ends).
+* text=auto eol=lf
