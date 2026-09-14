@@ -1,5 +1,5 @@
 // Minimal transfer API on node:http - no framework, no database, no dependencies.
-// Contract: docs/SPEC.md section 5.
+// Contract: docs/SPEC.md section 6.
 import http from 'node:http';
 import { MESSAGES, checkAmount, checkRecipient } from '../shared/rules.js';
 
@@ -81,7 +81,7 @@ function readJson(req) {
   });
 }
 
-// Check order is part of the contract (SPEC 5.3): only the first failure is reported.
+// Check order is part of the contract (SPEC 6.3): only the first failure is reported.
 async function createTransfer(req, res) {
   const { fromAccount, toAccount, amount } = await readJson(req);
 

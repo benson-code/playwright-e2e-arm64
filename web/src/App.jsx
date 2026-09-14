@@ -1,4 +1,4 @@
-// The whole UI: one transfer form. Behaviour is specified in docs/SPEC.md section 4.
+// The whole UI: one transfer form. Behaviour is specified in docs/SPEC.md section 5.
 import { useEffect, useState } from 'react';
 import {
   MESSAGES,
@@ -34,7 +34,7 @@ export default function App() {
     if (submitting) return;
     setResult(null);
 
-    // Client-side checks first (SPEC 4.3); the API repeats them regardless.
+    // Client-side checks first (SPEC U-04); the API repeats them regardless.
     const amountValue = parseAmountInput(amount);
     const errors = {
       recipient: checkRecipient(recipient, SENDER_ACCOUNT),
